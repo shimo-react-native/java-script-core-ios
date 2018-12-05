@@ -246,11 +246,7 @@ RCT_EXPORT_METHOD(show)
     return;
   }
 
-  NSString *desc = _bridge.bridgeDescription;
-  if (desc.length == 0) {
-    desc = NSStringFromClass([_bridge class]);
-  }
-  NSString *title = [NSString stringWithFormat:@"React Native: Development (%@)", desc];
+  NSString *title = [NSString stringWithFormat:@"Java Script Core Development"];
   // On larger devices we don't have an anchor point for the action sheet
   UIAlertControllerStyle style = [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone ? UIAlertControllerStyleActionSheet : UIAlertControllerStyleAlert;
   _actionSheet = [UIAlertController alertControllerWithTitle:title
