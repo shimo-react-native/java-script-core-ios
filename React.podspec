@@ -1,13 +1,14 @@
 # coding: utf-8
 
-source = { :git => 'https://github.com/facebook/react-native.git' }
+version = "0.0.1"
+source = { :git => 'https://github.com/shimo-react-native/java-script-core-ios.git', tag:  "v#{version}"}
 
 folly_compiler_flags = '-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1'
 folly_version = '2016.10.31.00'
 
 Pod::Spec.new do |s|
   s.name                    = "React"
-  s.version                 = "0.0.1"
+  s.version                 = version
   s.summary                 = "React Native JavaScriptCore for iOS"
   s.description             = <<-DESC
                                 JavaScriptCore iOS runtime from React Native
